@@ -1,7 +1,9 @@
+import { headerComponent } from "./header";
+
 function component() {
-    const element = document.createElement("div");
-    element.textContent = "Hello, Webpack!";
-    return element;
+    const containerElement = document.createElement("div");
+    containerElement.appendChild(headerComponent());
+    return containerElement;
 }
 
 document.body.appendChild(component());
