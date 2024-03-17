@@ -5,22 +5,27 @@ function headerComponent() {
     const navElement = document.createElement("nav");
     navElement.classList.add("nav");
 
-    const homeElement = document.createElement("button");
-    homeElement.setAttribute("id", "homeBtn");
-    homeElement.textContent = "HOME";
+    const homeBtnElement = document.createElement("button");
+    homeBtnElement.setAttribute("id", "homeBtn");
+    homeBtnElement.textContent = "HOME";
 
-    const menuElement = document.createElement("button");
-    menuElement.setAttribute("id", "menuBtn");
-    menuElement.textContent = "MENU";
+    const menuBtnElement = document.createElement("button");
+    menuBtnElement.setAttribute("id", "menuBtn");
+    menuBtnElement.textContent = "MENU";
 
-    const aboutElement = document.createElement("button");
-    aboutElement.setAttribute("id", "aboutBtn");
-    aboutElement.textContent = "ABOUT";
+    const aboutBtnElement = document.createElement("button");
+    aboutBtnElement.setAttribute("id", "aboutBtn");
+    aboutBtnElement.textContent = "ABOUT";
 
     headerElement.appendChild(navElement);
-    navElement.append(homeElement, menuElement, aboutElement);
+    navElement.append(homeBtnElement, menuBtnElement, aboutBtnElement);
 
-    return headerElement;
+    return {
+        headerElement,
+        homeBtnElement,
+        menuBtnElement,
+        aboutBtnElement,
+    };
 }
 
 export { headerComponent };

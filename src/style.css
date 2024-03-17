@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header {
@@ -36,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 8vh;
+    width: 100%;
     backdrop-filter: blur(8px);
 }
 
@@ -51,8 +53,16 @@ body {
     cursor: pointer;
 }
 
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+
 .footer {
     height: 4vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
