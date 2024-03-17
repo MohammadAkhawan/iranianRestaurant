@@ -1,8 +1,16 @@
 import { headerComponent } from "./header";
+import { contentComponent } from "./content";
+import { footerComponent } from "./footer";
+import "./style.css";
 
 function component() {
     const containerElement = document.createElement("div");
-    containerElement.appendChild(headerComponent());
+    containerElement.append(
+        headerComponent(),
+        contentComponent(),
+        footerComponent()
+    );
+
     return containerElement;
 }
 
