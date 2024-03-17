@@ -35,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 8vh;
     backdrop-filter: blur(8px);
 }
 
@@ -49,4 +49,12 @@ body {
     border: none;
     background: none;
     cursor: pointer;
+}
+
+.footer {
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
 }
