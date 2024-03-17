@@ -5,6 +5,8 @@ import "./style.css";
 
 function component() {
     const containerElement = document.createElement("div");
+    containerElement.classList.add("container");
+    
     containerElement.append(
         headerComponent(),
         contentComponent(),

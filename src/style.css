@@ -5,5 +5,48 @@
 }
 
 body {
-    background-color: aqua;
+    height: 100vh;
+}
+
+.container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(./hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    backdrop-filter: blur(8px);
+}
+
+.nav {
+    display: flex;
+    gap: 3vw;
+}
+
+.nav button {
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
