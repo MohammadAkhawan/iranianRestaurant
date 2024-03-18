@@ -6,15 +6,16 @@ import { menuComponent } from "./menu";
 import { aboutComponent } from "./about";
 import "./style.css";
 
-headerComponent();
+function component() {
+    const containerElement = document.createElement("div");
+    containerElement.classList.add("container");
+    containerElement.appendChild(headerComponent().headerElement);
+    containerElement.appendChild(contentComponent());
+    containerElement.appendChild(footerComponent());
+    return containerElement;
+}
 
-const containerElement = document.createElement("div");
-containerElement.classList.add("container");
-containerElement.appendChild(headerComponent().headerElement);
-containerElement.appendChild(contentComponent());
-containerElement.appendChild(footerComponent());
-
-document.body.appendChild(containerElement);
+document.body.appendChild(component());
 
 const homeBtn = document.querySelector("#homeBtn");
 const menuBtn = document.querySelector("#menuBtn");
